@@ -202,7 +202,7 @@
 
     async function fetchProducts() {
       try {
-        const res = await fetch("http://localhost:3000/items");
+        const res = await fetch("https://etmlshop.vercel.app/items");
         const data = await res.json();
         productsData = data.items;
         renderProducts(productsData);
@@ -293,7 +293,7 @@
   };
 
   try {
-    const res = await fetch("http://localhost:3000/reserve", {
+    const res = await fetch("https://etmlshop.vercel.app/reserve", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(reservation)
